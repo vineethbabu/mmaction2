@@ -140,14 +140,12 @@ def frame_extraction(video_path, short_side):
         frame = mmcv.imresize(frame, (new_w, new_h))
 
         frames.append(frame)
-        print('frame count',cnt)
         frame_path = frame_tmpl.format(cnt + 1)
         frame_paths.append(frame_path)
 
         cv2.imwrite(frame_path, frame)
         cnt += 1
         flag, frame = vid.read()
-    print('len of frames',len(frames))
     return frame_paths, frames
 
 
