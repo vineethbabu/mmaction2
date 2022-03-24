@@ -147,7 +147,7 @@ def frame_extraction(video_path, short_side):
         cv2.imwrite(frame_path, frame)
         cnt += 1
         flag, frame = vid.read()
-
+    print('len of frames',len(frames))
     return frame_paths, frames
 
 
